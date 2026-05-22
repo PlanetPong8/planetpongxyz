@@ -612,16 +612,29 @@ h1, h2, h3 {
   opacity: 1;
 }
 
-/* fix button font + styling */
 .link {
-  font-family: inherit;
+  font-family: 'Rubik', sans-serif;
   background: transparent;
   border: none;
   color: var(--text);
   cursor: pointer;
   font-size: 14px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
   padding: 0;
+  border-bottom: 1px solid rgba(143,231,255,0.4);
+
+  transition: transform 200ms ease, opacity 200ms ease;
 }
+
+.link:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
 
 /* expand button feel */
 .expand-btn {
@@ -677,4 +690,12 @@ h1, h2, h3 {
 
 .modal.show .modal__panel{
   transform: scale(1);
+}
+
+.modal__panel{
+  transition: transform 0.35s cubic-bezier(.2,.9,.2,1);
+}
+
+.modal{
+  transition: opacity 0.3s ease;
 }
