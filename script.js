@@ -100,3 +100,21 @@ modal?.addEventListener("click", (e) => {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") hideModal();
 });
+
+let targetScroll = window.scrollY;
+let currentScroll = window.scrollY;
+
+const speed = 0.08;
+
+window.addEventListener("wheel", (e) => {
+  targetScroll += e.deltaY;
+  targetScroll = Math.max(0, Math.min(targetScroll, document.body.scrollHeight - window.innerHeight));
+}, { passive: true });
+
+function smoothScroll() {
+  currentScroll += (targetScroll - currentScroll) * speed;
+  window.scrollTo(0, currentScroll);
+  requestAnimationFrame(smoothScroll);
+}
+
+smoothScroll();
