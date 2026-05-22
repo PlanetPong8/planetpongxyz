@@ -611,3 +611,51 @@ h1, h2, h3 {
   transform: scale(1);
   opacity: 1;
 }
+
+/* fix button font + styling */
+.link {
+  font-family: inherit;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+}
+
+/* expand button feel */
+.expand-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid rgba(143,231,255,0.4);
+  transition: transform 200ms ease, opacity 200ms ease;
+}
+
+.expand-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* smoother modal animation */
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal__panel {
+  transform: scale(0.92);
+  transition: transform 0.25s ease;
+}
+
+.modal.show .modal__panel {
+  transform: scale(1);
+}
