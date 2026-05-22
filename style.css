@@ -709,3 +709,71 @@ h1, h2, h3 {
 
   padding: 12px 20px;
 }
+
+/* ---------- Mobile Nav ---------- */
+
+.menu-toggle{
+  display: none;
+
+  background: transparent;
+  border: none;
+
+  color: white;
+
+  font-size: 1.8rem;
+
+  cursor: pointer;
+
+  z-index: 1001;
+}
+
+/* Mobile */
+
+@media (max-width: 768px){
+
+  .menu-toggle{
+    display: block;
+  }
+
+  .nav{
+    position: absolute;
+
+    top: 80px;
+    right: 20px;
+
+    width: 220px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    background: rgba(15,20,28,0.95);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(20px);
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+
+    transition: 0.3s ease;
+
+    z-index: 1000;
+  }
+
+  .nav.show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Hide desktop nav layout */
+  .topbar__inner{
+    position: relative;
+  }
+}
