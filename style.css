@@ -700,6 +700,12 @@ h1, h2, h3 {
   transition: opacity 0.3s ease;
 }
 
-.status-banner {
+
+.status-banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+
+  padding: 12px 20px;
 }
