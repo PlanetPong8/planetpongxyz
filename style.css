@@ -448,7 +448,7 @@ h1, h2, h3 {
 
 .brand {
   display: flex;
-  align-items: left;
+  text-align: left;
   gap: 0.6rem;
   text-decoration: none;
 }
