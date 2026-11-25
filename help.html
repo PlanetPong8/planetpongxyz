@@ -21,7 +21,7 @@
   <div class="container topbar__inner">
 
     <a class="brand" href="index.html">
-      <img src="mylogo.png" class="brand__logo" alt="Planet logo">
+      <img src="mylogo.png" class="brand__logo">
       <span class="brand__text">planetpong.xyz</span>
     </a>
 
@@ -30,13 +30,9 @@
       <a class="nav__link" href="about.html">About Me</a>
       <a class="nav__link" href="projects.html">My Stuff</a>
       <a class="nav__link" href="posts.html">Posts</a>
-      <a class="nav__link" href="help.html">Help</a>
+      <a class="nav__link active" href="help.html">Help</a>
     </nav>
 
-    <button class="menu-toggle" id="menuToggle">
-  ☰
-</button>
-    
   </div>
 </header>
 
@@ -76,7 +72,6 @@
       <article class="card project reveal">
 
         <h3>Sending Feedback Messages</h3>
-        <p><i>Popular</i></p>
 
         <p class="muted">
           Learn how to send messages on my website and contact me for feedback or questions.
@@ -154,7 +149,7 @@
 
       <p>
         First, locate the contact form or message section.
-        This is found in the <a href="https://planetpong.xyz/index.html"><strong>home page</strong></a>:
+        This is found in the <a href="https://planetpong.xyz/help.html"><strong>home page</strong></a>:
       </p>
 
       <ul>
@@ -244,33 +239,6 @@ window.addEventListener("click", function(e) {
     }
   });
 });
-
-const menuToggle = document.getElementById("menuToggle");
-const nav = document.querySelector(".nav");
-
-menuToggle.addEventListener("click", () => {
-  nav.classList.toggle("show");
-});
-
-</script>
-
-  <script>
-const reveals = document.querySelectorAll(".reveal");
-
-function revealOnScroll() {
-  reveals.forEach(el => {
-    const windowHeight = window.innerHeight;
-    const revealTop = el.getBoundingClientRect().top;
-
-    if (revealTop < windowHeight - 80) {
-      el.classList.add("visible");
-    }
-  });
-}
-
-window.addEventListener("scroll", revealOnScroll);
-
-revealOnScroll();
 </script>
   
 <script src="script.js"></script>
