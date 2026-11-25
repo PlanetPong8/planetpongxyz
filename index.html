@@ -121,15 +121,29 @@
   padding: 12px;
 
   font-family: inherit;
+  
+}
+
+.hero__content .title,
+.hero__content .construction-message {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center !important;
 }
 </style>
 
 </head>
 <body>
-    <div class="bg"></div>
-    <div class="stars"></div>
-    <div class=""></div>
+    <div class="bg" aria-hidden="true">
+  <div class="stars"></div>
+  <div class="stars stars2"></div>
+  <div class="nebula"></div>
+  <div class="vignette"></div>
 
+  <img src="astronaut.png" alt="" class="floating-astronaut">
+</div>
 <header class="topbar">
   <div class="container topbar__inner">
 
@@ -163,16 +177,18 @@
       <div class="hero__content reveal">
         <p class="kicker">Home</p>
         <h1 class="title">
-          <span class="accent">Welcome</span> 
+          <span class="accent">Hi, I'm Justin</span> 
         </h1>
         <p class="subtitle">
-          Welcome to my personal dev website portfolio, I'm interested into the language of programming, building websites, coding programmes,
-          and writing posts about what I have done, and maybe some quirky stuff about our own world and universe.
+          Welcome to my personal dev website portfolio, I’m a student developer who enjoys making websites, experimenting with code,
+  and building small ideas into real projects.
         </p>
           
-<div class="divider"><span></span></div>
+<div class="divider hero-divider"><span></span></div>
 
-<h1 style="text-align: center;">🚧 UNDER CONSTRUCTION // this website is still being worked and coded on. </h1>
+<p class="construction-message">
+  <span>Currently building and improving this site...</span>
+</p>
      
            
         
@@ -212,12 +228,12 @@
 
         <!-- Instagram -->
 
-        <a class="linkrow" href="https://www.instagram.com/justinhoo._" target="_blank">
+        <a class="linkrow" href="https://www.instagram.com/justinhoo1" target="_blank">
   <span class="linkleft">
     <i class="fa-brands fa-instagram icon"></i>
     <span>Instagram</span>
   </span>
-  <span class="muted">@justinhoo._ ↗</span>
+  <span class="muted">@justinhoo1 ↗</span>
 </a>
 
         <!-- Email -->
